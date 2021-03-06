@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PostList from './components/PostList';
+
+
 
 class App extends Component {
 
@@ -43,7 +46,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <form onSubmit={this.handleSubmit}>
+        
+        {/* <form onSubmit={this.handleSubmit}>
           <p>
             <input type="text" placeholder='Title' id='title' value={this.state.title} onChange={this.handleChange} required/>
           </p>
@@ -57,8 +61,12 @@ class App extends Component {
                   accept="image/png, image/jpeg"  onChange={this.handleImageChange} required/>
           </p>
           <input type="submit"/>
-        </form>
+        </form> */}
+        
+        <PostList />
+
       </div>
+
     );
   }
 }
